@@ -8,17 +8,13 @@ class StringBuilder{
         return this.#value;
     };
     padEnd(str){
-        this.#value = this.#value.split("").concat(str.split("")).join("");
-        return this.#value;
+        this.#value = `${this.#value}${str}`;
     };
     padStart(str){
-        this.#value = str.split("").concat(this.#value.split("")).join("");
-        return this.#value;
+        this.#value = `${str}${this.#value}`;
     };
     padBoth(str){
-        this.#value = this.#value.split("").concat(str.split("")).join("");
-        this.#value = str.split("").concat(this.#value.split("")).join("");
-        return this.#value;
+        this.#value = `${str}${this.#value}${str}`;
     };
 } 
 
